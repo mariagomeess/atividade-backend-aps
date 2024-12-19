@@ -17,8 +17,6 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Conectado ao MongoDB'))//Log de confirmação da conexão
     .catch(err => console.log(err));//Tratamento de erro caso a conexão falhe 
     
-
-
 // Rotas
 const produtoRoutes = require('./routes/produtos');
 app.use('/api/produtos', produtoRoutes);//Todas as rotas de produtos comecarão com /api
